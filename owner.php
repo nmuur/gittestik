@@ -2,7 +2,7 @@
     class Owner{
         private ?string $middlename = null;
 
-        public function __constuct(
+        public function __construct(
             private string $ownername,
             private string $surname,
             private string $number,
