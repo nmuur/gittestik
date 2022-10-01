@@ -1,0 +1,107 @@
+<?php
+class Avto{
+    public function __construct(
+        private Brand $brand,
+        private Model $model,
+        private DateTime $date,
+    ){}
+    
+    public function getBrand() : Brand {
+        return $this->brand;
+    }
+    public function getModel() : Model {
+        return $this->model;
+    }
+    public function getDate() : DateTime {
+        return $this->date;
+    }
+}
+class Brand{
+        public function __construct(
+        private string $name,
+        private Country $country,
+        private Owner $owner,
+    ){}
+
+    public function getName() : string {
+        return $this->name;
+    }
+    public function getCountry() : Country {
+        return $this->country;
+    }
+    public function getOwner() : Owner {
+        return $this->owner;
+    }
+
+
+
+}
+ class Country {
+
+    public function __construct(
+        private string $name,
+        private string $domain,
+        private string $phoneCode,
+    ){}
+    
+    public function getName() : string {
+        return $this->name;
+    }
+    public function getDomen() : string {
+        return $this->domain;
+    }
+    public function getPhonecode() : string {
+        return $this->phoneCode;
+    }
+}    
+class Model {
+        public function __construct(
+        private string $name,
+        private Country $country,
+        private string $dateStart,
+        private string $specific,
+    ){}
+
+    public function getName() : string {
+        return $this->name;
+    }
+    public function getCountry() : string {
+        return $this->country;
+    }
+    public function getDateStart() : string {
+        return $this->dateStart;
+    }
+    public function getSpecific() : string {
+        return $this->specific;
+    }
+}
+   class Owner{
+        private ?string $middlename = null;
+
+        public function __construct(
+            private string $ownername,
+            private string $surname,
+            private string $number,
+            private string $email,
+        ){}
+        public function getOwnername() : string {
+            return $this->ownername;
+        }
+        public function getSurname() : string {
+            return $this->surname;
+        }
+        public function getNumber() : string {
+            return $this->number;
+        }
+        public function getEmail() : string {
+            return $this->email;
+        }
+        public function setMiddlename(string $middlename) : void {
+            $this->middlename=$middlename;
+        }
+}    
+
+$car = new Avto();
+$car->getBrand()->getName();
+$car->getModel()->getName();
+$car->getCountry()->getName();
