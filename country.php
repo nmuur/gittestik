@@ -2,18 +2,18 @@
    class Country {
 
     public function __construct(
-        private string $countryname,
-        private string $domen,
-        private string $phonecode,
+        private string $name,
+        private string $domain,
+        private string $phoneCode,
     ){}
     
-    public function getCountryname() : string {
-        return $this->countryname;
+    public function getName() : string {
+        return $this->name;
     }
     public function getDomen() : string {
-        return $this->domen;
+        return $this->domain;
     }
     public function getPhonecode() : string {
-        return $this->phonecode;
+        return $this->phoneCode;
     }
-}  
+}    
