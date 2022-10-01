@@ -2,22 +2,22 @@
 
 class Model {
         public function __construct(
-        private string $modelname,
+        private string $name,
         private Country $country,
-        private string $datestart,
+        private string $dateStart,
         private string $specific,
     ){}
 
-    public function getModelname() : string {
-        return $this->modelname;
+    public function getName() : string {
+        return $this->name;
     }
-    public function getCountrycreator() : string {
+    public function getCountry() : string {
         return $this->country;
     }
-    public function getDatestart() : string {
-        return $this->datestart;
+    public function getDateStart() : string {
+        return $this->dateStart;
     }
     public function getSpecific() : string {
-        return $this->speific;
+        return $this->specific;
     }
 }
