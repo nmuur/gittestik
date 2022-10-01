@@ -1,13 +1,13 @@
 <?php
-    class Marka{
+    class Brand{
         public function __construct(
-        private string $markaname,
+        private string $name,
         private Country $country,
         private string $ownerinfo,
     ){}
 
-    public function getMarkaname() : string {
-        return $this->markaname;
+    public function getName() : string {
+        return $this->name;
     }
     public function getCountryname() : string {
         return $this->country;
